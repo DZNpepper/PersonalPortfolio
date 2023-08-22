@@ -1,23 +1,27 @@
+/* Common styles */
 :root {
-  --primary: #343a40; /* Change this to your desired dark color */
-  --secondary: #6c757d; /* Change this to your desired secondary color */
+  --primary: #343a40;
+  --secondary: #6c757d;
 }
-.social-icons a i {
-    font-size: 3rem;
-    color: rgb(226, 0, 0); 
-    margin: 6vh 2vh;
+
+/* Navbar styles */
+.navbar-toggler {
+  order: -1; /* Move toggler button to the left for mobile */
 }
-.navbar-brand p {
-    font-size: 30px;
-    margin: 1vh 1vh;
+.navbar-brand {
+  font-size: 30px;
+  margin: 1vh 1vh;
+  margin-right: 0; /* Reset the right margin for mobile version */
+  margin-bottom: 1vh; /* Add some space below the title */
+  margin-left: 1vh; /* Adjust the left margin for mobile */
 }
+
 .navbar-nav .nav-link {
-  color: black; /* Set the text color to black */
+  color: black;
   position: relative;
   transition: color 0.3s;
 }
 
-/* Red underline on hover */
 .navbar-nav .nav-link::after {
   content: '';
   width: 0;
@@ -32,19 +36,116 @@
 .navbar-nav .nav-link:hover::after {
   width: 100%;
 }
+
+/* Content styles */
+.col-md-6 {
+  text-align: center; /* Center text and image for mobile */
+}
+
 .col-md-6 h1 {
   font-size: 36px;
-  color: #333; /* Your desired color */
+  color: #333;
   font-weight: bold;
-  margin-left: 13vh;
-  margin-top: 15vh;
-  margin-bottom: 10vh;
-  /* Add any other styles you want */
+  margin: 15vh 0 10vh; /* Adjust margins */
 }
+
 .col-md-6 h2 {
-    font-size: 24px;
-    padding-top: 10vh;
+  font-size: 24px;
+  padding-top: 10vh;
 }
+
 .col-md-6 p {
-    margin-top: 3vh;
+  margin-top: 3vh;
+}
+
+/* Social icons */
+.social-icons a i {
+  font-size: 3rem;
+  color: rgb(226, 0, 0);
+  margin: 6vh 2vh;
+}
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 1rem 0; /* Add some padding for better spacing */
+}
+
+footer .navbar-brand {
+  font-size: 24px;
+  margin: 0;
+  display: flex;
+  align-items: center; /* Center items vertically */
+}
+
+footer .navbar-brand p {
+  margin: 0; /* Remove the margin from the paragraph */
+}
+
+
+/* Mobile-specific styles */
+@media (max-width: 767px) {
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 0;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 10px 15px;
+  }
+
+  .col-md-6 {
+    text-align: center;
+  }
+
+  .col-md-6 h1 {
+    height: 61px;
+    margin: 4vh 0 5vh;
+    font-size: 24px; /* Adjust font size for smaller screens */
+  }
+
+  /* Keep the .navbar-brand p at the center top */
+  .navbar-brand p {
+    margin: 0 auto;
+  }
+
+  .social-icons a i {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+    color: rgb(226, 0, 0);
+    margin: 1 2vh; /* Adjust margins for smaller screens */
+  }
+
+  /* Footer styles */
+  footer {
+    text-align: center;
+    padding: 1rem 0; /* Add some padding for better spacing */
+  }
+
+  footer .navbar-brand {
+    font-size: 24px;
+    margin: 0;
+    display: flex;
+    align-items: center; /* Center items vertically */
+  }
+
+  footer .navbar-brand p {
+    margin: 0; /* Remove the margin from the paragraph */
+  }
+
+  /* Center footer content vertically */
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  /* Style for the copyright text */
+  .copyright {
+    font-size: 20px;
+    margin-top: 1rem;
+  }
 }
