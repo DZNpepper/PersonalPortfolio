@@ -5,6 +5,10 @@
   --secondary: #6c757d;
 }
 
+html body {
+  background-color: rgb(0, 0, 0);
+}
+
 /* Desktop version styles */
 
 /* Navbar styles */
@@ -56,23 +60,26 @@
 
 .col-md-6 h1 {
   font-size: 36px;
-  color: #333;
+  color: #ffffff;
   font-weight: bold;
-  margin: 15vh 0 10vh;
+  margin-bottom: 1vh;
 }
 
 .col-md-6 h2 {
   font-size: 24px;
-  padding-top: 1vh;
-  padding-bottom: 9vh;
+
 }
 
+.col-md-6 h4 {
+  font-size: 24px;
+
+}
 
 /* Social icons */
 
 .social-icons a i {
   font-size: 3rem;
-  color: rgb(226, 0, 0);
+  color: rgb(199, 1, 1);
   margin: 1vh 1vh 5vh;
 }
 
@@ -126,7 +133,7 @@ footer .navbar-brand p {
   color: white;
   padding: 1vh 2vh;
   transition: color 0.3s;
-  width: 5vh;
+  width: 6vh;
 }
 .navbar-nav .nav-link:hover {
   color: var(--secondary);
@@ -137,15 +144,51 @@ footer .navbar-brand p {
 .col-md-6 h1 {
   height: 61px;
   margin-top: 10px;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   font-size: 24px;
 }
 
+.col-md-6 p {
+  margin-top: 2vh;
+  margin-bottom: 18vhs;
+}
+
+.col-md-6 h1 {
+  font-size: 26px;
+  color: #ffffff;
+  font-weight: bold;
+  margin-top: 0vh;
+  margin-left: -3vh;
+}
+
+.col-md-6 h2 {
+  color: white;
+  font-size: 24px;
+  margin-left: -205px;
+  margin-top: -105px;
+
+}
+
+.col-md-6 h4 {
+  color: rgb(211, 10, 10);
+  font-size: 24px;
+  margin-left: 85px;
+  margin-top: -36px;
+
+}
+.col-md-6 h5 {
+  color: rgb(255, 255, 255);
+  font-size: 36px;
+
+
+}
 /* Adjust social icons */
 
 .social-icons a i {
   font-size: 2rem;
-  margin: 2vh 1vh;
+  margin: 0.5vh 1vh;
+  margin-top: 17vh;
+  margin-bottom: 5vh;
 }
 
 /* Adjust footer styles */
@@ -155,7 +198,6 @@ footer {
   flex-direction: column;
   text-align: center;
   align-items: center;
-  padding: 1rem 0;
 }
 
 footer .navbar-brand {
@@ -165,17 +207,17 @@ footer .navbar-brand {
 /* Style for the copyright text */
 
 .copyright {
-  font-size: 20px;
+  font-size: 2vh;
   margin-top: 1rem;
 }
 
 .img-fluid {
-  margin-top: -15vh;
-  margin-bottom: 15vh;
-}
+  margin-bottom: 14vh;
+  margin-top: -10vh;
 }
 
+}
   footer .navbar-brand {
-    margin: 0;
+    margin: 1px;
   }
 
