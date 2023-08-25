@@ -3,30 +3,59 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Personal Portfolio</title>
+<title>Contact</title>
 <style>
+  /* Styling for the entire page */
   body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
   }
+  /* Container styling */
   .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
   }
+  /* Input and textarea styling */
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  /* Button styling */
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+  }
+  /* Header and footer styling */
   header, footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 10px;
   }
+  /* Footer positioning */
   footer {
     position: absolute;
     bottom: 0;
     width: 100%;
   }
+  /* Navigation styling */
   nav {
     background-color: #333;
     color: #fff;
@@ -38,106 +67,36 @@
     text-decoration: none;
     padding: 10px 20px;
   }
-  .navbar {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-  }
-  .navbar a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-  }
-  .navbar-toggler {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  .collapse {
-    display: none;
-  }
-  .navbar-toggler-icon {
-    color: #fff;
-  }
-  .navbar-nav {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  .navbar-nav li {
-    display: inline-block;
-    margin-right: 15px;
-  }
-  .navbar-nav li:last-child {
-    margin-right: 0;
-  }
-  .col-md-6 {
-    width: 50%;
-    float: left;
-  }
-  .img-fluid {
-    max-width: 100%;
-    height: auto;
-  }
-  .social-icons {
-    margin-top: 1.5rem;
-  }
-  .social-icons a {
-    margin-right: 0.75rem;
-    color: #dc3545;
-    text-decoration: none;
-  }
-  .social-icons a:last-child {
-    margin-right: 0;
-  }
 </style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <nav class="navbar">
-    <a class="navbar-brand" href="https://www.linkedin.com/in/tobydeane101"><p>Personal Portfolio</p></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="about.html">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="projects.html">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <div class="container mt-5" id="about">
-    <div class="row">
-      <div class="col-md-6">
-        <h1>Tobias Deane</h1>
-        <div class="col-md-6">
-          <img src="Images/Portrate.png" alt="Portfolio Image" class="img-fluid">
-        </div>
-        <h2>Hi. I'm </h2><h4>Tobias</h4><h5> and this is my website!</h5>
-        <p> A student studying web design and development at Edge Hill University</p>
-        <div class="social-icons mt-3">
-          <a href="https://twitter.com/tobias_deane" class="mr-3"><i class="fab fa-twitter fa-2x text-danger"></i></a>
-          <a href="https://www.linkedin.com/in/tobydeane101" class="mr-3"><i class="fab fa-linkedin fa-2x text-danger"></i></a>
-          <a href="https://github.com/DZNpepper/PersonalPortfolio" class="mr-3"><i class="fab fa-github fa-2x"></i></a>
-          <a href="mailto:tobydeane101@gmail.com" class="mr-3"><i class="far fa-envelope fa-2x"></i></a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <footer class="navbar">
-    <a class="navbar-brand" href="https://github.com/DZNpepper/PersonalPortfolio"><p>&copy; Tobias Deane</p></a>
-  </footer>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Header section -->
+<header>
+  <h1><span style="color: rgb(211, 0, 0);">Tobias</span> Deane</h1>
+  <p>Web Developer & Designer</p>
+</header>
+<!-- Navigation bar -->
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="projects.html">Projects</a>
+  <a href="contact.html">Contact</a>
+</nav>
+<!-- Main content container -->
+<div class="container">
+  <h1>Contact Me</h1>
+  <p>If you have any questions or would like to collaborate, feel free to get in touch with me using the form below:</p>
+  <!-- Contact form -->
+  <form action="process_form.php" method="post">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</div>
+<!-- Footer section -->
+<footer>
+  <p>&copy; 2023 Tobias Deane. All rights reserved.</p>
+</footer>
 </body>
 </html>

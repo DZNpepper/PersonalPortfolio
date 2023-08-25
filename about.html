@@ -5,77 +5,97 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About</title>
 <style>
+  /* Styling for the entire page */
   body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
   }
+  /* Container styling */
   .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
   }
-  input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
+  /* Media query for smaller screens */
   @media (max-width: 768px) {
     .container {
       padding: 10px;
     }
   }
+  /* Header and footer styling */
   header, footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 10px;
   }
+  /* Styling for footer positioning */
   footer {
     position: absolute;
     bottom: 0;
     width: 100%;
   }
+  /* Navigation styling */
   nav {
     background-color: #333;
     color: #fff;
     padding: 10px;
     text-align: center;
   }
+  /* Styling for navigation links */
   nav a {
     color: #fff;
     text-decoration: none;
     padding: 10px 20px;
   }
+  /* Styling for the content section */
+  .content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  .content h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  .content p {
+    color: #555;
+    line-height: 1.6;
+  }
 </style>
 </head>
 <body>
+<!-- Header section -->
 <header>
-  <h1>Tobias Deane</h1>
+  <!-- Make the "Tobias" part red using inline style -->
+  <h1><span style="color: rgb(211, 0, 0);">Tobias</span> Deane</h1>
   <p>Web Developer & Designer</p>
 </header>
+<!-- Navigation bar -->
 <nav>
   <a href="index.html">Home</a>
   <a href="projects.html">Projects</a>
+  <a href="about.html">About</a> <!-- Include About link in the navigation -->
   <a href="contact.html">Contact</a>
 </nav>
+<!-- Main content container -->
 <div class="container">
-  <h1>About Me</h1>
-  <p>I'm a passionate web developer and designer with a strong interest in creating engaging and user-friendly websites. With a background in both design and development, I bring a unique perspective to every project.</p>
+  <div class="content">
+    <h1>About Me</h1>
+    <p>Hello! I'm Tobias Deane, a passionate and creative web developer and designer. With a strong background in both front-end and back-end technologies, I bring a unique blend of skills to every project.</p>
+    <p>My journey in the world of web development started several years ago when I became fascinated by the power of the web to connect people and showcase ideas. Since then, I've been dedicated to creating clean, modern, and user-friendly websites that leave a lasting impression.</p>
+    <p>From crafting elegant user interfaces to implementing complex functionality, I take pride in every aspect of my work. I believe that great design goes beyond aesthetics—it's about creating intuitive and meaningful experiences for users.</p>
+    <p>When I'm not coding or designing, you can find me exploring the latest web development trends, experimenting with new technologies, or sharing my insights through blog posts and tutorials. I'm also a firm believer in continuous learning and always strive to improve my skills.</p>
+    <p>If you're looking for a dedicated web developer and designer who is committed to delivering outstanding results, I'd love to collaborate on your next project. Feel free to reach out to me!</p>
+  </div>
 </div>
+<!-- Footer section -->
 <footer>
   <p>&copy; 2023 Tobias Deane. All rights reserved.</p>
 </footer>
-</
+</body>
+</html>

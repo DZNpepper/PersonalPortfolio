@@ -1,57 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tobias Deane - Portfolio</title>
+<style>
+/* Styling for the entire page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: white; /* Set default text color to white */
+  }
+
+/* Header section at the top */
+.header {
+  background-color: #333;
+  text-align: center;
+  padding: 10px;
+}
+.header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: rgb(211, 0, 0); /* Set header text color to white */
+}
+.header .white-text {
+  color: #fff;
+}
+
+/* Navigation bar styling */
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+}
+.nav-list li {
+  margin: 0;
+}
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.nav-link:hover {
+  background-color: #444;
+}
+
+/* Landing section styling */
+.landing {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+.profile-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.name {
+  font-size: 2rem;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: white; /* Set name text color to white */
+}
+.name .white-text {
+  color: white;
+}
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: white; /* Set title text color to white */
+}
+.btn {
+  background-color: red;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  color: white; /* Set button text color to white */
+}
+.btn:hover {
+  background-color: #b30000;
+}
+
+/* Footer styling */
+footer {
+  background-color: #333;
+  text-align: center;
+  padding: 10px;
+}
+footer p {
+  color: white; /* Set footer text color to white */
+}
+
+</style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="https://www.linkedin.com/in/tobydeane101"><p>Personal Portfolio</p></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="projects.html">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </nav>      
-      <div class="container mt-5" id="about">
-        <div class="row">
-            <div class="col-md-6">
-                <h1>Tobias Deane</h1>
-                <div class="col-md-6">
-                  <img src="Images/Portrate.png" alt="Portfolio Image" class="img-fluid">
-                </div>
-                <h2>Hi. I'm </h2><h4>Tobias</h4><h5> and this is my website!</h5>
-                <p> A student studying web design and development at Edge Hill University</p>
-                <div class="social-icons mt-3">
-                    <a href="https://twitter.com/tobias_deane" class="mr-3"><i class="fab fa-twitter fa-2x text-danger"></i></a>
-                    <a href="https://www.linkedin.com/in/tobydeane101" class="mr-3"><i class="fab fa-linkedin fa-2x text-danger"></i></a>
-                    <a href="https://github.com/DZNpepper/PersonalPortfolio" class="mr-3"><i class="fab fa-github fa-2x"></i></a>
-                    <a href="mailto:tobydeane101@gmail.com" class="mr-3"><i class="far fa-envelope fa-2x"></i></a>
-                </div>                  
-              </div>   
-            </div>
-        </div>
-      </div>
-      <footer class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="https://github.com/DZNpepper/PersonalPortfolio"><p>&copy; Tobias Deane</p></a>
-      </footer>      
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<div class="header">
+  <h1>Tobias <span class="white-text">Deane</span></h1>
+</div>
+<ul class="nav-list">
+  <li><a class="nav-link" href="about.html">About</a></li>
+  <li><a class="nav-link" href="projects.html">Projects</a></li>
+  <li><a class="nav-link" href="contact.html">Contact</a></li>
+</ul>
+<div class="landing" id="about">
+  <img class="profile-image" src="Images/portrate.png" alt="Tobias Deane">
+  <h1 class="name">Web Developer & <span class="white-text">Designer</span></h1>
+  <p class="title">Passionate about creating clean and functional digital experiences.</p>
+  <a class="btn" href="projects.html">View Projects</a>
+</div>
+<footer id="contact">
+  <p>&copy; 2023 Tobias Deane. All rights reserved.</p>
+</footer>
 </body>
 </html>

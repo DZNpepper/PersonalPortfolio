@@ -5,17 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>My Projects</title>
 <style>
+  /* Styling for the entire page */
   body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    color: white; /* Set default text color to white */
   }
+  /* Container styling */
   .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
   }
+  /* Styling for individual projects */
   .project {
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -23,42 +27,107 @@
     margin-bottom: 20px;
     background-color: #fff;
   }
+  /* Styling for headings */
   h2 {
     margin-top: 0;
+    color: white; /* Set heading text color to white */
   }
+  /* Styling for paragraphs */
   p {
     margin-bottom: 10px;
   }
+  /* Styling for project images */
   .project-image {
     max-width: 100%;
     height: auto;
   }
+  /* Media query for smaller screens */
   @media (max-width: 768px) {
     .container {
       padding: 10px;
     }
   }
+  /* Header and footer styling */
+  header, footer {
+    background-color: #333;
+    text-align: center;
+    padding: 10px;
+  }
+  /* Styling for footer positioning */
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  /* Navigation styling */
+  nav {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+  }
+  /* Styling for navigation links */
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    position: relative; /* Add relative positioning */
+    padding: 10px 20px;
+  }
+
+  /* Pseudo-element for the underline effect */
+  nav a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Position the underline below the text */
+    width: 0; /* Initially no width */
+    height: 2px; /* Height of the underline */
+    background-color: rgb(211, 0, 0); /* Red color */
+    transition: width 0.3s ease; /* Transition for the width property */
+  }
+
+  /* Hover effect */
+  nav a:hover::before {
+    width: 100%; /* Expand the width to create the underline effect */
+  }
 </style>
 </head>
 <body>
+<!-- Header section -->
+<header>
+  <h1><span style="color: rgb(211, 0, 0);">Tobias</span> Deane</h1>
+  <p>Web Developer & Designer</p>
+</header>
+
+<!-- Navigation bar -->
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="projects.html">Projects</a>
+  <a href="contact.html">Contact</a>
+</nav>
+<!-- Main content container -->
 <div class="container">
   <h1>My Projects</h1>
-  
+
+  <!-- Project 1 -->
   <div class="project">
     <h2>Project 1: Project Name</h2>
     <p>Description of the project goes here.</p>
     <img class="project-image" src="project1.jpg" alt="Project 1">
     <p><a href="#">View Project</a></p>
   </div>
-  
+
+  <!-- Project 2 -->
   <div class="project">
     <h2>Project 2: Project Name</h2>
     <p>Description of the project goes here.</p>
     <img class="project-image" src="project2.jpg" alt="Project 2">
     <p><a href="#">View Project</a></p>
   </div>
-  
-  <!-- Add more project sections as needed -->
 </div>
+<!-- Footer section -->
+<footer>
+  <p>&copy; 2023 Tobias Deane. All rights reserved.</p>
+</footer>
 </body>
 </html>
