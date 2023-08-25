@@ -212,10 +212,9 @@ footer .navbar-brand {
   font-size: 2vh;
   margin-top: 1rem;
 }
-
 .img-fluid {
-  margin-bottom: 25vh;
-  margin-top: -24vh;
+  max-width: 100%;
+  height: auto;
 }
 
 }
