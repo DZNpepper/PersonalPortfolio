@@ -1,33 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal Portfolio</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  header, footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+  }
+  .navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+  }
+  .navbar-toggler {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  .collapse {
+    display: none;
+  }
+  .navbar-toggler-icon {
+    color: #fff;
+  }
+  .navbar-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .navbar-nav li {
+    display: inline-block;
+    margin-right: 15px;
+  }
+  .navbar-nav li:last-child {
+    margin-right: 0;
+  }
+  .container mt-5 {
+    margin-top: 5rem;
+  }
+  .col-md-6 {
+    width: 50%;
+    float: left;
+  }
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+  .social-icons {
+    margin-top: 1.5rem;
+  }
+  .social-icons a {
+    margin-right: 0.75rem;
+    color: #dc3545;
+    text-decoration: none;
+  }
+  .social-icons a:last-child {
+    margin-right: 0;
+  }
+</style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"><p>Professional Portfolio</p></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#projects">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-          </ul>
+  <nav class="navbar">
+    <a class="navbar-brand" href="https://www.linkedin.com/in/tobydeane101"><p>Personal Portfolio</p></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="projects.html">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container mt-5" id="about">
+    <div class="row">
+      <div class="col-md-6">
+        <h1>Tobias Deane</h1>
+        <div class="col-md-6">
+          <img src="Images/Portrate.png" alt="Portfolio Image" class="img-fluid">
         </div>
-      </nav>      
+        <h2>Hi. I'm </h2><h4>Tobias</h4><h5> and this is my website!</h5>
+        <p> A student studying web design and development at Edge Hill University</p>
+        <div class="social-icons mt-3">
+          <a href="https://twitter.com/tobias_deane" class="mr-3"><i class="fab fa-twitter fa-2x text-danger"></i></a>
+          <a href="https://www.linkedin.com/in/tobydeane101" class="mr-3"><i class="fab fa-linkedin fa-2x text-danger"></i></a>
+          <a href="https://github.com/DZNpepper/PersonalPortfolio" class="mr-3"><i class="fab fa-github fa-2x"></i></a>
+          <a href="mailto:tobydeane101@gmail.com" class="mr-3"><i class="far fa-envelope fa-2x"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="navbar">
+    <a class="navbar-brand" href="https://github.com/DZNpepper/PersonalPortfolio"><p>&copy; Tobias Deane</p></a>
+  </footer>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
