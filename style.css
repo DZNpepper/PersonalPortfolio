@@ -149,8 +149,10 @@ footer .navbar-brand p {
 }
 
 .col-md-6 p {
-  margin-top: 2vh;
-  margin-bottom: 18vhs;
+  color: white;
+  font-size: 12px;
+  margin-top: 4vh;
+  margin-bottom: 1vhs;
 }
 
 .col-md-6 h1 {
@@ -164,15 +166,15 @@ footer .navbar-brand p {
 .col-md-6 h2 {
   color: white;
   font-size: 24px;
-  margin-left: -205px;
-  margin-top: -105px;
+  margin-left: -15vh;
+  margin-top: -20vh;
 
 }
 
 .col-md-6 h4 {
   color: rgb(211, 10, 10);
   font-size: 24px;
-  margin-left: 85px;
+  margin-left: 7vh;
   margin-top: -36px;
 
 }
@@ -212,8 +214,8 @@ footer .navbar-brand {
 }
 
 .img-fluid {
-  margin-bottom: 14vh;
-  margin-top: -10vh;
+  margin-bottom: 25vh;
+  margin-top: -24vh;
 }
 
 }
