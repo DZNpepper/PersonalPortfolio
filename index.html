@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tobias Deane - Portfolio</title>
 <style>
+
 /* Styling for the entire page */
 body {
     font-family: Arial, sans-serif;
@@ -76,6 +77,29 @@ body {
     position: absolute;
     width: 100%; /* Set the width to 100% of the parent link's width */
 }
+
+  /* Pseudo-element for the underline effect */
+  nav a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Position the underline below the text */
+    width: 0; /* Initially no width */
+    height: 2px; /* Height of the underline */
+    background-color: rgb(211, 0, 0); /* Red color */
+    transition: width 0.3s ease; /* Transition for the width property */
+  }
+
+  /* Hover effect */
+  nav a:hover::before {
+    width: 75%; /* Set the width to 75% of the parent link's width */
+  }
+  
+  /* Highlight current page link */
+  nav a.current-page::before {
+    position: center;
+    width: 100%; /* Set the width to 75% of the parent link's width */
+  }
 
 /* Landing section styling */
 .landing {
