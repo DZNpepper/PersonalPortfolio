@@ -10,14 +10,18 @@
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: black; /* Set background color to black */
     color: white; /* Set default text color to white */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
   }
   /* Container styling */
   .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    flex: 1; /* Allow main content to take remaining space */
   }
   /* Styling for individual projects */
   .project {
@@ -26,6 +30,10 @@
     padding: 20px;
     margin-bottom: 20px;
     background-color: #fff;
+  }
+  /* Styling for project titles */
+  .project h2 {
+    color: red; /* Set project titles to red */
   }
   /* Styling for headings */
   h2 {
@@ -46,28 +54,48 @@
     .container {
       padding: 10px;
     }
+    /* Styling for project images on small screens */
+    .project-image {
+      max-width: 100%;
+      height: auto;
+    }
+    /* Adjusting the contact link position for mobile */
+    nav a[href="contact.html"] {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #333;
+      text-align: center;
+      padding: 10px 0;
+      color: white;
+      z-index: 999;
+    }
   }
   /* Header and footer styling */
   header, footer {
-    background-color: #333;
+    background-color: #141414;
     text-align: center;
     padding: 10px;
   }
   /* Styling for footer positioning */
   footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
     position: absolute;
     bottom: 0;
-    width: 100%;
+    margin-bottom: -3vh;
   }
   /* Navigation styling */
   nav {
-    background-color: #333;
+    background-color: #000000;
     padding: 10px;
     text-align: center;
   }
   /* Styling for navigation links */
   nav a {
-    color: #fff;
+    color: white; /* Set navigation link color to white */
     text-decoration: none;
     position: relative; /* Add relative positioning */
     padding: 10px 20px;
@@ -89,6 +117,11 @@
   nav a:hover::before {
     width: 100%; /* Expand the width to create the underline effect */
   }
+  
+  /* Highlight current page link */
+  nav a.current-page::before {
+    width: 100%; /* Expand the width to create the underline effect */
+  }
 </style>
 </head>
 <body>
@@ -102,9 +135,10 @@
 <nav>
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
-  <a href="projects.html">Projects</a>
+  <a href="projects.html" class="current-page">Projects</a>
   <a href="contact.html">Contact</a>
 </nav>
+
 <!-- Main content container -->
 <div class="container">
   <h1>My Projects</h1>
@@ -125,6 +159,7 @@
     <p><a href="#">View Project</a></p>
   </div>
 </div>
+
 <!-- Footer section -->
 <footer>
   <p>&copy; 2023 Tobias Deane. All rights reserved.</p>
