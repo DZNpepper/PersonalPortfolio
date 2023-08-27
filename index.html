@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tobias Deane - Portfolio</title>
 <style>
-
 /* Styling for the entire page */
 body {
     font-family: Arial, sans-serif;
@@ -48,15 +47,15 @@ body {
     margin: 0;
 }
 .nav-link {
-    color: #fff;
+    color: white; /* Set navigation link color to white */
     text-decoration: none;
+    position: relative; /* Add relative positioning */
     padding: 10px 20px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; /* Transition for the background color property */
 }
 
-  /* Pseudo-element for the underline effect */
-  nav a::before {
+/* Pseudo-element for the underline effect */
+.nav-link::before {
     content: '';
     position: absolute;
     left: 0;
@@ -65,18 +64,18 @@ body {
     height: 2px; /* Height of the underline */
     background-color: rgb(211, 0, 0); /* Red color */
     transition: width 0.3s ease; /* Transition for the width property */
-  }
+}
 
-  /* Hover effect */
-  nav a:hover::before {
+/* Hover effect */
+.nav-link:hover::before {
     width: 75%; /* Set the width to 75% of the parent link's width */
-  }
-  
-  /* Highlight current page link */
-  nav a.current-page::before {
-    position: center;
-    width: 100%; /* Set the width to 75% of the parent link's width */
-  }
+}
+
+/* Highlight current page link */
+.nav-link.current-page::before {
+    position: absolute;
+    width: 100%; /* Set the width to 100% of the parent link's width */
+}
 
 /* Landing section styling */
 .landing {
@@ -91,11 +90,11 @@ body {
     width: 100%;
     max-width: 400px;
     border-radius: 10px;
-    margin-bottom: 20px;
+    margin-top: -2vh;
 }
 .name {
     font-size: 2rem;
-    margin-top: 10px;
+    margin-top: 10vh;
     margin-bottom: 5px;
     color: white; /* Set name text color to white */
 }
@@ -103,7 +102,7 @@ body {
     color: white;
 }
 .title {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 20px;
     color: white; /* Set title text color to white */
 }
@@ -126,7 +125,7 @@ footer {
     background-color: #141414;
     text-align: center;
     padding: 10px;
-    margin-top: 18vh;
+    margin-top: 35vh;
 }
 footer p {
     color: white; /* Set footer text color to white */
@@ -144,7 +143,7 @@ footer p {
 <div class="landing" id="about">
     <img class="profile-image" src="Images/Portrate.png" alt="Tobias Deane">
     <h1 class="name">Web Developer & <span class="white-text">Designer</span></h1>
-    <p class="title">Passionate about creating clean and functional digital experiences.</p>
+    <p class="title">Hello. My name is Tobias and I am a university student at Edge Hill!</p>
     <a class="btn" href="projects.html">View Projects</a>
 </div>
 <footer id="contact">

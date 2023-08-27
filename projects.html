@@ -28,8 +28,9 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 20px;
-    margin-bottom: 20px;
-    background-color: #fff;
+    margin-bottom: 5vh;
+    margin-top: 7vh;
+    background-color: #000000;
   }
   /* Styling for project titles */
   .project h2 {
@@ -51,25 +52,44 @@
   }
   /* Media query for smaller screens */
   @media (max-width: 768px) {
-    .container {
-      padding: 10px;
-    }
-    /* Styling for project images on small screens */
-    .project-image {
-      max-width: 100%;
-      height: auto;
-    }
-    /* Adjusting the contact link position for mobile */
-    nav a[href="contact.html"] {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background-color: #333;
-      text-align: center;
-      padding: 10px 0;
-      color: white;
-      z-index: 999;
-    }
+  .container {
+    padding: 10px;
+    margin-top: 5vh;
+  }
+
+  /* Styling for project images on small screens */
+  .project-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Styling for navigation links on small screens */
+  nav a {
+    padding: 10px;
+  }
+
+  /* Pseudo-element for the underline effect on small screens */
+  nav a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: rgb(211, 0, 0);
+    transition: width 0.3s ease;
+  }
+
+  /* Hover effect on small screens */
+  nav a:hover::before {
+    width: 100%;
+  }
+
+  /* Highlight current page link on small screens */
+  nav a.current-page::before {
+    width: 100%;
+  }
+
   }
   /* Header and footer styling */
   header, footer {
@@ -82,10 +102,10 @@
     width: 100%;
     text-align: center;
     padding: 10px;
-    background-color: #333;
+    background-color: #141414;
     position: absolute;
     bottom: 0;
-    margin-bottom: -3vh;
+    margin-bottom: -5vh;
   }
   /* Navigation styling */
   nav {
@@ -135,7 +155,6 @@
 <nav>
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
-  <a href="projects.html" class="current-page">Projects</a>
   <a href="contact.html">Contact</a>
 </nav>
 
@@ -145,16 +164,16 @@
 
   <!-- Project 1 -->
   <div class="project">
-    <h2>Project 1: Project Name</h2>
-    <p>Description of the project goes here.</p>
+    <h2>Project 1: Coming Soon</h2>
+    <p></p>
     <img class="project-image" src="project1.jpg" alt="Project 1">
     <p><a href="#">View Project</a></p>
   </div>
 
   <!-- Project 2 -->
   <div class="project">
-    <h2>Project 2: Project Name</h2>
-    <p>Description of the project goes here.</p>
+    <h2>Project 2: Coming Soon</h2>
+    <p></p>
     <img class="project-image" src="project2.jpg" alt="Project 2">
     <p><a href="#">View Project</a></p>
   </div>
