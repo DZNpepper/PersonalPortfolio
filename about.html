@@ -10,87 +10,145 @@
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: black; /* Set background color to black */
+    color: white; /* Set default text color to white */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
   }
   /* Container styling */
   .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    flex: 1; /* Allow main content to take remaining space */
   }
   /* Media query for smaller screens */
   @media (max-width: 768px) {
     .container {
       padding: 10px;
     }
+    /* Styling for navigation links */
+    .nav-list {
+      text-align: center;
+      background-color: #000000;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      z-index: 999;
+    }
+    .nav-link {
+      display: block;
+      padding: 10px 0;
+      color: #fff;
+      text-decoration: none;
+    }
   }
   /* Header and footer styling */
   header, footer {
-    background-color: #333;
+    width: 100%;
+    background-color: #141414;
     color: #fff;
     text-align: center;
     padding: 10px;
   }
   /* Styling for footer positioning */
   footer {
-    position: absolute;
-    bottom: 0;
     width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #141414;
+    margin-bottom: -3vh;
   }
   /* Navigation styling */
   nav {
-    background-color: #333;
-    color: #fff;
+    background-color: #000000;
     padding: 10px;
     text-align: center;
   }
   /* Styling for navigation links */
   nav a {
-    color: #fff;
+    color: white; /* Set navigation link color to white */
     text-decoration: none;
+    position: relative; /* Add relative positioning */
     padding: 10px 20px;
   }
+
+  /* Pseudo-element for the underline effect */
+  nav a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Position the underline below the text */
+    width: 0; /* Initially no width */
+    height: 2px; /* Height of the underline */
+    background-color: rgb(211, 0, 0); /* Red color */
+    transition: width 0.3s ease; /* Transition for the width property */
+  }
+
+  /* Hover effect */
+  nav a:hover::before {
+    width: 75%; /* Set the width to 75% of the parent link's width */
+  }
+  
+  /* Highlight current page link */
+  nav a.current-page::before {
+    position: center;
+    width: 100%; /* Set the width to 75% of the parent link's width */
+  }
+  
   /* Styling for the content section */
   .content {
-    background-color: #fff;
+    background-color: #000000; /* Update content background color */
     padding: 20px;
     border-radius: 4px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 2vh;
+    margin-right: -2vh;
   }
-  .content h2 {
-    color: #333;
-    font-size: 1.5rem;
+  .content h1 {
+    color: #fff; /* Update heading color */
+    font-size: 1.8rem;
     margin-bottom: 10px;
   }
   .content p {
-    color: #555;
+    color: #ccc; /* Update paragraph color */
     line-height: 1.6;
+  }
+  .content ul {
+    color: #ccc; /* Update list color */
   }
 </style>
 </head>
 <body>
 <!-- Header section -->
 <header>
-  <!-- Make the "Tobias" part red using inline style -->
   <h1><span style="color: rgb(211, 0, 0);">Tobias</span> Deane</h1>
   <p>Web Developer & Designer</p>
 </header>
 <!-- Navigation bar -->
-<nav>
-  <a href="index.html">Home</a>
-  <a href="projects.html">Projects</a>
-  <a href="about.html">About</a> <!-- Include About link in the navigation -->
-  <a href="contact.html">Contact</a>
+<nav class="nav-list">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="about.html" class="nav-link current-page">About</a>
+  <a href="projects.html" class="nav-link">Projects</a>
+  <a href="contact.html" class="nav-link">Contact</a>
 </nav>
 <!-- Main content container -->
 <div class="container">
   <div class="content">
     <h1>About Me</h1>
-    <p>Hello! I'm Tobias Deane, a passionate and creative web developer and designer. With a strong background in both front-end and back-end technologies, I bring a unique blend of skills to every project.</p>
-    <p>My journey in the world of web development started several years ago when I became fascinated by the power of the web to connect people and showcase ideas. Since then, I've been dedicated to creating clean, modern, and user-friendly websites that leave a lasting impression.</p>
-    <p>From crafting elegant user interfaces to implementing complex functionality, I take pride in every aspect of my work. I believe that great design goes beyond aesthetics—it's about creating intuitive and meaningful experiences for users.</p>
-    <p>When I'm not coding or designing, you can find me exploring the latest web development trends, experimenting with new technologies, or sharing my insights through blog posts and tutorials. I'm also a firm believer in continuous learning and always strive to improve my skills.</p>
-    <p>If you're looking for a dedicated web developer and designer who is committed to delivering outstanding results, I'd love to collaborate on your next project. Feel free to reach out to me!</p>
+    <p>An enthusiastic, flexible individual with customer service experience, who is always willing to learn and succeed. Thrives on providing excellent customer service, with attention to detail. Possesses good written and verbal communication skills. Proactive, hardworking, reliable, and passionate about achieving excellence. Ability to work alone or in a team. Now looking for a position where I can develop my existing skills.</p>
+    <h2>Key Skills</h2>
+    <ul>
+      <li>Excellent customer service</li>
+      <li>Effective communication</li>
+      <li>Time management and organization</li>
+      <li>Collaborative teamwork</li>
+      <li>Numeracy and literacy</li>
+      <li>Empathy and consideration</li>
+      <li>Computer literacy</li>
+    </ul>
   </div>
 </div>
 <!-- Footer section -->
