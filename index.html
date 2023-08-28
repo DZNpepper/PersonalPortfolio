@@ -23,6 +23,8 @@ body {
     background-color: #141414;
     text-align: center;
     padding: 10px;
+    width: 90%;
+    margin-left: 2vh;
 }
 .header h1 {
     margin: 0;
@@ -72,11 +74,24 @@ body {
     width: 75%; /* Set the width to 75% of the parent link's width */
 }
 
-/* Highlight current page link */
-.nav-link.current-page::before {
-    position: absolute;
-    width: 100%; /* Set the width to 100% of the parent link's width */
+/* Add styling for the current-page class */
+.nav-link.current-page {
+    /* Reset position and width */
+    position: relative;
 }
+.nav-link.current-page::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%; /* Set the width to cover the entire link */
+    height: 2px;
+    background-color: rgb(211, 0, 0); /* Red color */
+    transition: width 0.3s ease;
+}
+
+/* Remove the previous nav a.current-page::before styling */
+
 
   /* Pseudo-element for the underline effect */
   nav a::before {
@@ -91,17 +106,20 @@ body {
   }
 
   /* Hover effect */
+
   nav a:hover::before {
-    width: 75%; /* Set the width to 75% of the parent link's width */
+    width: 75%; 
   }
   
   /* Highlight current page link */
+
   nav a.current-page::before {
     position: center;
-    width: 100%; /* Set the width to 75% of the parent link's width */
+    width: 100%; 
   }
 
 /* Landing section styling */
+
 .landing {
     position: relative;
     display: flex;
@@ -111,24 +129,23 @@ body {
     padding: 20px;
 }
 .profile-image {
-    width: 100%;
+    width: 31vh;
+    height: 33vh;
     max-width: 400px;
     border-radius: 10px;
-    margin-top: -2vh;
 }
 .name {
     font-size: 2rem;
-    margin-top: 10vh;
-    margin-bottom: 5px;
-    color: white; /* Set name text color to white */
+    margin-bottom: 5vh;
+    color: white; 
 }
 .name .white-text {
     color: white;
 }
 .title {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    color: white; /* Set title text color to white */
+    font-size: 1rem;
+    margin-bottom: 5vh;
+    color: white; 
 }
 .btn {
     background-color: red;
@@ -138,17 +155,21 @@ body {
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s ease;
-    color: white; /* Set button text color to white */
+    color: white;
 }
 .btn:hover {
     background-color: #b30000;
 }
 
 /* Footer styling */
+
 footer {
     background-color: #141414;
     text-align: center;
     padding: 10px;
+    width: 90%;
+    height: 4vh;
+    margin-left: 2vh;
     margin-top: 35vh;
 }
 footer p {
@@ -161,12 +182,14 @@ footer p {
     <h1>Tobias <span class="white-text">Deane</span></h1>
 </div>
 <ul class="nav-list">
+    <li><a class="nav-link current-page" href="index.html">Home</a></li>
     <li><a class="nav-link" href="about.html">About</a></li>
+    <li><a class="nav-link" href="projects.html">Projects</a></li>
     <li><a class="nav-link" href="contact.html">Contact</a></li>
 </ul>
 <div class="landing" id="about">
     <img class="profile-image" src="Images/Portrate.png" alt="Tobias Deane">
-    <h1 class="name">Web Developer & <span class="white-text">Designer</span></h1>
+    <h1 class="name">Web Designer & Developer</h1>
     <p class="title">Hello. My name is Tobias and I am a university student at Edge Hill!</p>
     <a class="btn" href="projects.html">View Projects</a>
 </div>
