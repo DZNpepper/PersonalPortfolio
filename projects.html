@@ -5,13 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>My Projects</title>
 <style>
+
   /* Styling for the entire page */
+
   body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: black; /* Set background color to black */
-    color: white; /* Set default text color to white */
+    background-color: black; 
+    color: white;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -28,15 +30,19 @@
       font-size: 12px;
       margin-top: -1vh;
     }
+
   /* Container styling */
+
   .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
     margin-top: 9vh;
-    flex: 1; /* Allow main content to take remaining space */
+    flex: 1; 
   }
+
   /* Styling for individual projects */
+
   .project {
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -46,46 +52,60 @@
     background-color: #000000;
   }
   /* Styling for project titles */
+
   .project h2 {
-    color: red; /* Set project titles to red */
+    color: red;
   }
   /* Styling for project titles */
+
   .project h2 {
-    color: red; /* Set project titles to red */
+    color: red;
   }
   /* Styling for headings */
+
   h2 {
     margin-top: 0;
-    color: white; /* Set heading text color to white */
+    color: white;
+
   }
+
   /* Styling for paragraphs */
+
   p {
     margin-bottom: 7vh;
   }
+
   /* Styling for project images */
+
   .project-image {
     max-width: 100%;
     height: auto;
   }
+
   /* Media query for smaller screens */
+
   @media (max-width: 768px) {
   .container {
     padding: 10px;
     margin-top: 5vh;
   }
 
+
   /* Styling for project images on small screens */
+
   .project-image {
     max-width: 100%;
     height: auto;
   }
 
   /* Styling for navigation links on small screens */
+
   nav a {
     padding: 10px;
   }
 
   /* Pseudo-element for the underline effect on small screens */
+
   nav a::before {
     content: '';
     position: absolute;
@@ -99,17 +119,20 @@
 
   /* Hover effect on small screens */
   nav a:hover::before {
+
     width: 100%;
   }
 
   /* Highlight current page link on small screens */
   nav a.current-page::before {
     width: 100%;
+
   }
 
   }
+  /* Styling for footer positioning */
+
   footer {
-    background-color: #141414;
     text-align: center;
     width: 95%; 
     position: fixed; 
@@ -118,16 +141,6 @@
     margin-left: 1vh;
   }
 
-  /* Styling for footer positioning */
-
-  footer {
-    background-color: #141414;
-    text-align: center;
-    width: 95%; 
-    position: fixed; 
-    bottom: 0;
-    height: 4vh; 
-  }
 
   /* Navigation styling */
 
