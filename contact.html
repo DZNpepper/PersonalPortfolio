@@ -6,7 +6,9 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 <title>Contact</title>
 <style>
+
   /* Styling for the entire page */
+
   body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -15,15 +17,21 @@
   }
 
   /* Container styling */
+
   .container {
     max-width: 800px;
     margin-bottom: 14vh;
     margin: 0 auto;
     padding: 6vh;
-    color: white; /* Set text color to white */
+    color: white;
   }
+  h6 {
+      font-size: 12px;
+      margin-top: -1vh;
+    }
 
   /* Input and textarea styling */
+
   input, textarea {
     width: 100%;
     padding: 10px;
@@ -36,6 +44,7 @@
   }
 
   /* Button styling */
+
   button {
     background-color: rgb(211, 0, 0);
     color: #fff;
@@ -47,21 +56,26 @@
   }
 
   /* Navigation styling */
-  nav {
-    background-color: #000000;
-    padding: 10px;
-    text-align: center;
-  }
+
+  .nav {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    padding: 13px 12px;
+    transition: background-color 0.3s ease;
+}
 
   /* Styling for navigation links */
+
   nav a {
     color: white;
     text-decoration: none;
     position: relative;
-    padding: 10px 20px;
+    padding: 10px 10px;
   }
 
   /* Pseudo-element for the underline effect */
+
   nav a::before {
     content: '';
     position: absolute;
@@ -74,16 +88,19 @@
   }
 
   /* Hover effect */
+
   nav a:hover::before {
     width: 100%;
   }
   
   /* Highlight current page link */
+
   nav a.current-page::before {
     width: 100%;
   }
 
   /* Additional styles for the social media icons */
+
   .social-icons {
     display: flex;
     justify-content: center;
@@ -96,12 +113,14 @@
   }
 
   /* Customized color for Bootstrap icons */
+
   .social-icons .bi {
-    color:rgb(211, 0, 0); /* Change the color to red */
+    color:rgb(211, 0, 0); 
     font-size: 3rem;
   }
 
   /* Additional styles for the form */
+
   form label {
     display: block;
     margin-bottom: 1vh;
@@ -110,6 +129,7 @@
   }
   
   /* Adjustments for responsive layout */
+
   @media (max-width: 768px) {
     .container {
       padding: 10px;
@@ -117,33 +137,41 @@
   }
 
   /* Container for content and footer */
+
   .content-container {
     display: flex;
     flex-direction: column;
-    min-height: 80vh; /* Ensure the container takes up at least the full viewport height */
-    justify-content: space-between; /* Space content and footer evenly */
+    justify-content: space-between;
   }
 </style>
 </head>
 <body>
 <div class="content-container">
+
   <!-- Header section -->
-  <header style="background-color: #141414; color: #fff; text-align: center; padding: 10px; width: 75%; margin: 0 auto;">
+
+  <header style="color: #fff; text-align: center;">
     <h1><span style="color: rgb(211, 0, 0);">Tobias</span> Deane</h1>
-    <p>Web Designer & Developer</p>
+    <h6>Web Designer & Developer</h6>
   </header>
+
   <!-- Navigation bar -->
-  <nav>
+
+  <nav style="display: flex; justify-content: space-around;">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="projects.html">Projects</a>
     <a class="current-page" href="contact.html">Contact</a>
   </nav>
+
   <!-- Main content container -->
+
   <div class="container">
     <h1>Contact Me</h1>
     <p>If you have any questions or would like to collaborate, feel free to get in touch with me using the form below:</p>
+    
     <!-- Contact form -->
+
     <form action="https://formspree.io/f/xeqbgdnw" method="post">
       <label for="email">Your email:</label>
       <input type="email" id="email" name="email" required>
@@ -153,6 +181,7 @@
     </form>
   
     <!-- Social media icons -->
+
     <div class="social-icons">
       <a href="https://github.com/DZNpepper/PersonalPortfolio" target="_blank"><i class="bi bi-github"></i></a>
       <a href="https://twitter.com/tobias_deane" target="_blank"><i class="bi bi-twitter"></i></a>
@@ -160,8 +189,10 @@
     </div>
   </div>
   </div>
+
   <!-- Footer section -->
-  <footer style="background-color: #141414; color: #fff; text-align: center; padding: 1vh; width: 90%; margin-left: 2vh; margin-top: 20vh;">
+
+  <footer style="color: #fff; text-align: center; margin-top: 20vh;">
     <p>&copy; 2023 Tobias Deane. All rights reserved.</p>
   </footer>
 </div>

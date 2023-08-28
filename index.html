@@ -7,20 +7,22 @@
 <style>
 
 /* Styling for the entire page */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: black; /* Set background color to black */
-    color: white; /* Set default text color to white */
+    background-color: black;
+    color: white;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
 /* Header section at the top */
+
 .header {
-    background-color: #141414;
+    background-color: #000000;
     text-align: center;
     padding: 10px;
     width: 90%;
@@ -29,54 +31,57 @@ body {
 .header h1 {
     margin: 0;
     font-size: 1.5rem;
-    color: rgb(211, 0, 0); /* Set header text color to white */
+    color: rgb(211, 0, 0); 
 }
 .header .white-text {
     color: #fff;
 }
 
 /* Navigation bar styling */
+
 .nav-list {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: center;
-    background-color: #000000; /* Set navigation background color to black */
-    flex-wrap: wrap; /* Allow navigation links to wrap on smaller screens */
+    background-color: #000000; 
+    flex-wrap: wrap;
     margin-top: 3vh;
 }
 .nav-list li {
     margin: 0;
 }
 .nav-link {
-    color: white; /* Set navigation link color to white */
+    color: white;
     text-decoration: none;
-    position: relative; /* Add relative positioning */
-    padding: 10px 20px;
-    transition: background-color 0.3s ease; /* Transition for the background color property */
+    position: relative;
+    padding: 13px 12px;
+    transition: background-color 0.3s ease;
 }
 
 /* Pseudo-element for the underline effect */
+
 .nav-link::before {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -2px; /* Position the underline below the text */
-    width: 0; /* Initially no width */
-    height: 2px; /* Height of the underline */
-    background-color: rgb(211, 0, 0); /* Red color */
-    transition: width 0.3s ease; /* Transition for the width property */
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: rgb(211, 0, 0);
+    transition: width 0.3s ease;
 }
 
 /* Hover effect */
+
 .nav-link:hover::before {
-    width: 75%; /* Set the width to 75% of the parent link's width */
+    width: 75%;
 }
 
 /* Add styling for the current-page class */
+
 .nav-link.current-page {
-    /* Reset position and width */
     position: relative;
 }
 .nav-link.current-page::before {
@@ -84,25 +89,23 @@ body {
     position: absolute;
     left: 0;
     bottom: -2px;
-    width: 100%; /* Set the width to cover the entire link */
+    width: 100%;
     height: 2px;
-    background-color: rgb(211, 0, 0); /* Red color */
+    background-color: rgb(211, 0, 0);
     transition: width 0.3s ease;
 }
 
-/* Remove the previous nav a.current-page::before styling */
-
-
   /* Pseudo-element for the underline effect */
+
   nav a::before {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -2px; /* Position the underline below the text */
-    width: 0; /* Initially no width */
-    height: 2px; /* Height of the underline */
-    background-color: rgb(211, 0, 0); /* Red color */
-    transition: width 0.3s ease; /* Transition for the width property */
+    bottom: -2px; 
+    width: 0;
+    height: 2px; 
+    background-color: rgb(211, 0, 0);
+    transition: width 0.3s ease; 
   }
 
   /* Hover effect */
@@ -129,8 +132,8 @@ body {
     padding: 20px;
 }
 .profile-image {
-    width: 31vh;
-    height: 33vh;
+    width: 36vh;
+    height: 38vh;
     max-width: 400px;
     border-radius: 10px;
 }
@@ -164,7 +167,7 @@ body {
 /* Footer styling */
 
 footer {
-    background-color: #141414;
+    background-color: #000000;
     text-align: center;
     padding: 10px;
     width: 90%;
@@ -173,7 +176,7 @@ footer {
     margin-top: 35vh;
 }
 footer p {
-    color: white; /* Set footer text color to white */
+    color: white;
 }
 </style>
 </head>
