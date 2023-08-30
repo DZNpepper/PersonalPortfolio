@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tobias Deane - Portfolio</title>
+<title>Tobias Deane - Personal Portfolio</title>
 <style>
 
 /* Styling for the entire page */
@@ -19,18 +19,20 @@ body {
     min-height: 100vh;
 }
 
-/* Header section at the top */
+/* Header section */
 
 .header {
     background-color: #000000;
     text-align: center;
     padding: 10px;
-    width: 90%;
-    margin-left: 2vh;
+    width: 100%;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
 }
 .header h1 {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     color: rgb(211, 0, 0); 
 }
 .header .white-text {
@@ -81,9 +83,6 @@ body {
 
 /* Add styling for the current-page class */
 
-.nav-link.current-page {
-    position: relative;
-}
 .nav-link.current-page::before {
     content: '';
     position: absolute;
@@ -132,10 +131,11 @@ body {
     padding: 20px;
 }
 .profile-image {
-    width: 36vh;
-    height: 38vh;
+    width: 24vh;
+    height: 39vh;
     max-width: 400px;
     border-radius: 10px;
+    margin-top: 9vh;
 }
 .name {
     font-size: 2rem;
@@ -170,33 +170,50 @@ footer {
     background-color: #000000;
     text-align: center;
     padding: 10px;
-    width: 90%;
-    height: 4vh;
-    margin-left: 2vh;
-    margin-top: 35vh;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 footer p {
     color: white;
+    margin: 0;
 }
+
 </style>
 </head>
 <body>
+
+<!-- Header section -->
+
 <div class="header">
     <h1>Tobias <span class="white-text">Deane</span></h1>
 </div>
+
+<!-- Navigation bar -->
+
 <ul class="nav-list">
     <li><a class="nav-link current-page" href="index.html">Home</a></li>
     <li><a class="nav-link" href="about.html">About</a></li>
     <li><a class="nav-link" href="projects.html">Projects</a></li>
     <li><a class="nav-link" href="contact.html">Contact</a></li>
 </ul>
+
+<!-- Main content container -->
+
 <div class="landing" id="about">
     <img class="profile-image" src="Images/Portrate.png" alt="Tobias Deane">
     <h1 class="name">Web Designer & Developer</h1>
     <p class="title">Hello. My name is Tobias and I am a university student at Edge Hill!</p>
     <a class="btn" href="projects.html">View Projects</a>
 </div>
-<footer id="contact">
+
+<!-- Footer section -->
+
+<footer>
     <p>&copy; 2023 Tobias Deane. All rights reserved.</p>
 </footer>
 </body>
