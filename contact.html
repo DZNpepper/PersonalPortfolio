@@ -162,29 +162,6 @@ h1 {
     font-size: 3rem;
   }
 
-/* Star rating styling */
-
-.rating {
-  text-align: center;
-  margin-top: 2vh;
-}
-
-.star {
-  font-size: 3vh;
-  color: rgb(255, 255, 255);
-  cursor: pointer;
-}
-
-.star.selected {
-  color: red;
-}
-
-.review-link {
-  text-align: center;
-  margin-top: 4rem;
-  margin-bottom: -13vh;
-}
-
 /* Styling for the review link */
 
 .review-link a {
@@ -248,28 +225,12 @@ footer p {
     <!-- Contact form -->
 
     <form action="https://formspree.io/f/xeqbgdnw" method="post">
-      <label for="reviewer-name">Your Name:</label>
-      <input type="text" id="reviewer-name" required>
-      
       <label for="email">Your email:</label>
       <input type="email" id="email" name="email" required>
 
       <label for="message">Your message:</label>
       <textarea id="message" name="message" rows="4" required></textarea>
-
-      <div class="rating">
-        <span class="star" onclick="setRating(1)">☆</span>
-        <span class="star" onclick="setRating(2)">☆</span>
-        <span class="star" onclick="setRating(3)">☆</span>
-        <span class="star" onclick="setRating(4)">☆</span>
-        <span class="star" onclick="setRating(5)">☆</span>
-      </div>
-
       <button type="submit" onclick="submitReview()">Submit Review</button>
-
-    <div class="review-link">
-      <a href="reviews.html">Click here to see other reviews</a>
-    </div>
 
     <!-- Social media icons -->
 
@@ -286,6 +247,5 @@ footer p {
 <footer>
   <p>&copy; 2023 Tobias Deane. All rights reserved.</p>
 </footer>
-<script src="script.js"></script>
 </body>
 </html>
