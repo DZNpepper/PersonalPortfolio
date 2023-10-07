@@ -1,0 +1,140 @@
+/* Global Styles */
+body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+        justify-content: center; /* Center items vertically */
+        min-height: 100vh;
+        overflow-x: hidden;
+}
+
+h1.game {
+    text-align: center;
+    margin-top: 1vh;
+    margin-bottom: 5vh;
+}
+
+h2, h6 {
+    margin: 0;
+}
+
+/* Header section */
+.header {
+    padding: 10px;
+    width: 100%;
+    display: flex; 
+    align-items: center;
+    flex-direction: column;
+}
+.header h1 {
+    font-size: 2.5rem;
+    color: rgb(211, 0, 0);
+}
+.header .white-text {
+    color: #fff;
+}
+
+/* Navigation bar styling */
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+.nav-list li {
+    margin: 0;
+}
+.nav-link {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    padding: 13px 12px;
+    transition: background-color 0.3s ease;
+}
+.nav-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: rgb(211, 0, 0);
+    transition: width 0.3s ease;
+}
+.nav-link:hover::before {
+    width: 75%;
+}
+.nav-link.current-page::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(211, 0, 0);
+    transition: width 0.3s ease;
+}
+
+/* Container styling */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 3vh;
+    flex: 1; 
+}
+
+/* Project Styles */
+.project {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 5vh;
+    margin-top: 7vh;
+    background-color: #000000;
+    text-align: center;
+}
+.project h2 {
+    color: red;
+}
+.project-content a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+.project-content a:hover,
+.project-content a:active {
+    text-decoration: underline;
+    color: red;
+}
+
+/* Back button */
+.back-button {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: red;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.back-button:hover {
+    background-color: darkred;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 4vh;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

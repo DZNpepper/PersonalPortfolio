@@ -162,6 +162,37 @@ h1 {
     font-size: 3rem;
   }
 
+/* Star rating styling */
+
+.rating {
+  text-align: center;
+  margin-top: 2vh;
+}
+
+.star {
+  font-size: 3vh;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.star.selected {
+  color: red;
+}
+
+.review-link {
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: -13vh;
+}
+
+/* Styling for the review link */
+
+.review-link a {
+  color: rgb(211, 0, 0);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
   /* Footer styling */
 
   footer {
@@ -213,21 +244,37 @@ footer p {
   <div class="container">
     <h1>Contact Me</h1>
     <p>If you have any questions or would like to collaborate, feel free to get in touch with me using the form below:</p>
-    
+      
     <!-- Contact form -->
 
     <form action="https://formspree.io/f/xeqbgdnw" method="post">
+      <label for="reviewer-name">Your Name:</label>
+      <input type="text" id="reviewer-name" required>
+      
       <label for="email">Your email:</label>
       <input type="email" id="email" name="email" required>
+
       <label for="message">Your message:</label>
-      <textarea id="message" name="message" rows="6" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <div class="rating">
+        <span class="star" onclick="setRating(1)">☆</span>
+        <span class="star" onclick="setRating(2)">☆</span>
+        <span class="star" onclick="setRating(3)">☆</span>
+        <span class="star" onclick="setRating(4)">☆</span>
+        <span class="star" onclick="setRating(5)">☆</span>
+      </div>
+
+      <button type="submit" onclick="submitReview()">Submit Review</button>
+
+    <div class="review-link">
+      <a href="reviews.html">Click here to see other reviews</a>
+    </div>
+
     <!-- Social media icons -->
 
     <div class="social-icons">
-      <a href="https://github.com/DZNpepper/PersonalPortfolio" target="_blank"><i class="bi bi-github"></i></a>
+      <a href="https://github.com/DZNpepper/" target="_blank"><i class="bi bi-github"></i></a>
       <a href="https://twitter.com/tobias_deane" target="_blank"><i class="bi bi-twitter"></i></a>
       <a href="https://www.linkedin.com/in/tobydeane101/" target="_blank"><i class="bi bi-linkedin"></i></a>
     </div>
@@ -239,5 +286,6 @@ footer p {
 <footer>
   <p>&copy; 2023 Tobias Deane. All rights reserved.</p>
 </footer>
+<script src="script.js"></script>
 </body>
 </html>

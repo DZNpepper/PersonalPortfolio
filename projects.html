@@ -137,6 +137,20 @@ body {
     color: red;
   }
 
+.project-content {
+  text-align: center;
+}
+.project-content a {
+    text-decoration: none;
+    color: white; /* Set initial text color to white */
+    transition: color 0.3s ease; /* Add transition effect for text color change */
+}
+
+.project-content a:hover,
+.project-content a:active {
+    text-decoration: underline;
+    color: red; /* Change text color to red on hover or click */
+}
 
 /* Footer styling */
 
@@ -191,11 +205,12 @@ footer p {
 
   <!-- Project 1 -->
 
-  <div class="project">
-    <h2>Project 1: Coming Soon</h2>
-    <img class="project-image" src="project1.jpg" alt="Project 1">
-    <p><a href="#">View Project</a></p>
-  </div>
+  <div class="project project-content">
+    <h2>Project 1: Balloon Shooter Game</h2>
+    <img class="project-image" src="Images/red-balloon.png" alt="Project 1 (Balloon Shooter Game)">
+    <p><a href="BalloonShooter.html">Play Game</a></p>
+</div>
+
 
   <h2>Description:</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -217,11 +232,12 @@ footer p {
 
   <!-- Project 2 -->
 
-  <div class="project">
+  <div class="project project-content">
     <h2>Project 2: Coming Soon</h2>
     <img class="project-image" src="project2.jpg" alt="Project 2">
     <p><a href="#">View Project</a></p>
-  </div>
+</div>
+
 
   <h2>Description:</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
