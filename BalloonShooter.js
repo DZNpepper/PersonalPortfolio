@@ -100,6 +100,31 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     });
+      // Touch Movement for Mobile Devices
+      canvas.addEventListener("touchmove", function (event) {
+        event.preventDefault(); // Prevent scrolling on touch devices
+        const touch = event.touches[0];
+        crosshair.x = touch.clientX - canvas.getBoundingClientRect().left;
+        crosshair.y = touch.clientY - canvas.getBoundingClientRect().top;
+    });
+
+    // Handle touch events similar to mouse click
+    canvas.addEventListener("touchstart", function () {
+        if (isGameOver) return;
+
+        // Iterate through balloons and check for clicks
+        for (let i = balloons.length - 1; i >= 0; i--) {
+            const balloon = balloons[i];
+            const dx = balloon.x - crosshair.x;
+            const dy = balloon.y - crosshair.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+
+            if (distance < balloon.radius * 1.8) {
+                balloons.splice(i, 1);
+                score++;
+            }
+        }
+    });
 
 // Game loop
 function gameLoop() {

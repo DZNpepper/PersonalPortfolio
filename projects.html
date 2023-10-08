@@ -92,7 +92,7 @@ body {
  /* Styling for paragraphs */
 
  p {
-    margin-bottom: 7vh;
+    margin-bottom: 4vh;
   }
   h1 {
     margin-top: -3vh;
@@ -145,11 +145,44 @@ body {
     color: white; /* Set initial text color to white */
     transition: color 0.3s ease; /* Add transition effect for text color change */
 }
-
 .project-content a:hover,
 .project-content a:active {
     text-decoration: underline;
     color: red; /* Change text color to red on hover or click */
+}
+.section-title {
+    font-size: 2rem;
+    color: red;
+    margin-top: 3vh;
+}
+
+.game-description {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 2vh;
+}
+
+.feature-list {
+    margin-top: 1.5rem;
+}
+
+.feature-list h3 {
+    color: red;
+}
+
+.feature-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-list li {
+    margin-bottom: 0.5rem;
+}
+
+.feature-list li strong {
+    color: red;
 }
 
 /* Footer styling */
@@ -210,25 +243,22 @@ footer p {
     <img class="project-image" src="Images/red-balloon.png" alt="Project 1 (Balloon Shooter Game)">
     <p><a href="BalloonShooter.html">Play Game</a></p>
 </div>
-
-
-  <h2>Description:</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt.
-    Proin sed libero enim sed. Sed risus ultricies tristique nulla aliquet enim tortor at.
-    Pretium nibh ipsum consequat nisl vel. Sed vulputate mi sit amet mauris commodo quis.
-    Fames ac turpis egestas sed tempus urna et. Justo donec enim diam vulputate ut. Id neque aliquam vestibulum morbi. Donec ac odio tempor orci dapibus. Facilisis sed odio morbi quis. Massa tincidunt dui ut ornare lectus sit amet est placerat. Leo vel orci porta non pulvinar neque laoreet. Nisl condimentum id venenatis a. Iaculis nunc sed augue lacus viverra vitae. Sed libero enim sed faucibus turpis in eu. Non nisi est sit amet facilisis. 
-    In hendrerit gravida rutrum quisque.
-    Suspendisse sed nisi lacus sed viverra tellus in hac habitasse. 
-    Nisl condimentum id venenatis a condimentum vitae sapien pellentesque habitant. 
-    Ultrices sagittis orci a scelerisque.
-    Amet mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan. 
-    Id faucibus nisl tincidunt eget nullam non nisi. Tempor orci eu lobortis elementum nibh tellus molestie nunc non. 
-    Vitae congue eu consequat ac felis donec et odio. Tempus egestas sed sed risus pretium quam vulputate dignissim. 
-    Libero enim sed faucibus turpis. Eget felis eget nunc lobortis mattis aliquam. 
-    Integer enim neque volutpat ac tincidunt vitae semper quis lectus. Consequat ac felis donec et odio pellentesque. 
-    Urna porttitor rhoncus dolor purus non enim praesent elementum. Sit amet luctus venenatis lectus magna fringilla urna.
-    Lectus magna fringilla urna porttitor rhoncus dolor purus non. Aliquam vestibulum morbi blandit cursus risus at.</p>
+  <h2 class="section-title">Game Description</h2>
+  <div class="game-description">
+      <p>In this exciting balloon shooter game, players are put to the test, challenging their aiming and shooting skills. The game features a vibrant display of colorful balloons floating on the screen, inviting players to pop them with precision and speed.</p>
+      <div class="feature-list">
+          <h3>Key Features:</h3>
+          <ul>
+              <li><strong>Interactive Balloons:</strong> Experience a visually stimulating game environment with colorful balloons floating upwards. Players can interact with these balloons, aiming to pop them by clicking (on desktop) or tapping (on mobile devices) the screen.</li>
+              <li><strong>Dynamic Crosshair:</strong> Stay on target with the dynamic crosshair located at the center of the screen. The crosshair moves in response to the player's mouse movements (on desktop) or touch gestures (on mobile devices), indicating the precise aiming position.</li>
+              <li><strong>Score Tracking:</strong> Keep track of your progress through a dedicated score meter displayed on the screen. Successfully popping balloons adds points to your score, while missing balloons results in score deductions.</li>
+              <li><strong>Gameplay Challenges:</strong> To elevate the gaming experience, the balloons move in a wobbly pattern, creating an extra layer of challenge. Players must time their shots accurately to pop the balloons amidst their unpredictable movement.</li>
+          </ul>
+      </div>
+      <h3>How to Play:</h3>
+      <p><strong>Popping Balloons:</strong> Use your skills to pop balloons by clicking the left mouse button (on desktop) or tapping the screen (on mobile devices). Aim carefully and act swiftly to achieve the highest score possible!</p>
+  </div>
+  
 
   <!-- Project 2 -->
 
@@ -238,24 +268,8 @@ footer p {
     <p><a href="#">View Project</a></p>
 </div>
 
-
   <h2>Description:</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt.
-    Proin sed libero enim sed. Sed risus ultricies tristique nulla aliquet enim tortor at.
-    Pretium nibh ipsum consequat nisl vel. Sed vulputate mi sit amet mauris commodo quis.
-    Fames ac turpis egestas sed tempus urna et. Justo donec enim diam vulputate ut. Id neque aliquam vestibulum morbi. Donec ac odio tempor orci dapibus. Facilisis sed odio morbi quis. Massa tincidunt dui ut ornare lectus sit amet est placerat. Leo vel orci porta non pulvinar neque laoreet. Nisl condimentum id venenatis a. Iaculis nunc sed augue lacus viverra vitae. Sed libero enim sed faucibus turpis in eu. Non nisi est sit amet facilisis. 
-    In hendrerit gravida rutrum quisque.
-    Suspendisse sed nisi lacus sed viverra tellus in hac habitasse. 
-    Nisl condimentum id venenatis a condimentum vitae sapien pellentesque habitant. 
-    Ultrices sagittis orci a scelerisque.
-    Amet mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan. 
-    Id faucibus nisl tincidunt eget nullam non nisi. Tempor orci eu lobortis elementum nibh tellus molestie nunc non. 
-    Vitae congue eu consequat ac felis donec et odio. Tempus egestas sed sed risus pretium quam vulputate dignissim. 
-    Libero enim sed faucibus turpis. Eget felis eget nunc lobortis mattis aliquam. 
-    Integer enim neque volutpat ac tincidunt vitae semper quis lectus. Consequat ac felis donec et odio pellentesque. 
-    Urna porttitor rhoncus dolor purus non enim praesent elementum. Sit amet luctus venenatis lectus magna fringilla urna.
-    Lectus magna fringilla urna porttitor rhoncus dolor purus non. Aliquam vestibulum morbi blandit cursus risus at.</p>
+  <p>Coming soon</p>
 </div>
 
 <!-- Footer section -->

@@ -138,3 +138,13 @@ footer {
     justify-content: center;
     align-items: center;
 }
+/* Media queries for canvas responsiveness */
+
+@media (max-width: 768px) {
+    #game-canvas {
+        width: 100%; 
+        height: auto;
+        max-width: 800px;
+        max-height: 600px;
+    }
+}
