@@ -1,4 +1,5 @@
 /* Global Styles */
+
 body {
         font-family: Arial, sans-serif;
         margin: 0;
@@ -7,8 +8,8 @@ body {
         color: white;
         display: flex;
         flex-direction: column;
-        align-items: center; /* Center items horizontally */
-        justify-content: center; /* Center items vertically */
+        align-items: center; 
+        justify-content: center; 
         min-height: 100vh;
         overflow-x: hidden;
 }
@@ -24,6 +25,7 @@ h2, h6 {
 }
 
 /* Header section */
+
 .header {
     padding: 10px;
     width: 100%;
@@ -39,7 +41,9 @@ h2, h6 {
     color: #fff;
 }
 
+
 /* Navigation bar styling */
+
 .nav-list {
     list-style: none;
     padding: 0;
@@ -81,7 +85,7 @@ h2, h6 {
     transition: width 0.3s ease;
 }
 
-/* Container styling */
+
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -90,7 +94,7 @@ h2, h6 {
     flex: 1; 
 }
 
-/* Project Styles */
+
 .project {
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -114,7 +118,6 @@ h2, h6 {
     color: red;
 }
 
-/* Back button */
 .back-button {
     color: white;
     text-decoration: none;
@@ -125,6 +128,17 @@ h2, h6 {
 }
 .back-button:hover {
     background-color: darkred;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.canvas-container {
+    position: relative;
+    display: inline-block;
 }
 
 /* Footer styling */
@@ -138,13 +152,12 @@ footer {
     justify-content: center;
     align-items: center;
 }
-/* Media queries for canvas responsiveness */
 
+/* Media queries for canvas responsiveness */
 @media (max-width: 768px) {
     #game-canvas {
-        width: 100%; 
-        height: auto;
-        max-width: 800px;
-        max-height: 600px;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
     }
 }

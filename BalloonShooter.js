@@ -59,14 +59,15 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         draw() {
+            let balloonImage;
             if (this.color === 'red') {
-                balloonImage.src = "Images/red-balloon.png";
+                balloonImage = redBalloonImage;
             } else if (this.color === 'green') {
-                balloonImage.src = "Images/green-balloon.png";
+                balloonImage = greenBalloonImage;
             } else if (this.color === 'blue') {
-                balloonImage.src = "Images/blue-balloon.png";
+                balloonImage = blueBalloonImage;
             }
-
+    
             ctx.drawImage(
                 balloonImage,
                 this.x - this.radius,
@@ -77,59 +78,77 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Mouse Movement
     canvas.addEventListener("mousemove", function (event) {
-        crosshair.x = event.clientX - canvas.getBoundingClientRect().left;
-        crosshair.y = event.clientY - canvas.getBoundingClientRect().top;
+        if (isGameStarted) {
+            const rect = canvas.getBoundingClientRect();
+            crosshair.x = event.clientX - rect.left;
+            crosshair.y = event.clientY - rect.top;
+        }
     });
-
-    // Handle mouse click event
-    canvas.addEventListener("click", function () {
-        if (isGameOver) return;
-
-        // Iterate through balloons and check for clicks
-        for (let i = balloons.length - 1; i >= 0; i--) {
-            const balloon = balloons[i];
-            const dx = balloon.x - crosshair.x;
-            const dy = balloon.y - crosshair.y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
-
-            if (distance < balloon.radius * 1.8) {
-                balloons.splice(i, 1);
-                score++;
+    
+    
+    canvas.addEventListener("click", function (event) {
+        if (isGameStarted && !isGameOver) {
+            const rect = canvas.getBoundingClientRect();
+            const mouseX = event.clientX - rect.left;
+            const mouseY = event.clientY - rect.top;
+    
+            // Iterate through balloons and check for clicks
+            for (let i = balloons.length - 1; i >= 0; i--) {
+                const balloon = balloons[i];
+                const dx = balloon.x - mouseX;
+                const dy = balloon.y - mouseY;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+    
+                if (distance < balloon.radius * 1.5) { 
+                    balloons.splice(i, 1);
+                    score++;
+                }
             }
         }
     });
-      // Touch Movement for Mobile Devices
-      canvas.addEventListener("touchmove", function (event) {
-        event.preventDefault();
-        const touch = event.touches[0];
-        crosshair.x = touch.clientX - canvas.getBoundingClientRect().left;
-        crosshair.y = touch.clientY - canvas.getBoundingClientRect().top;
-    });
 
-    // Handle touch events similar to mouse click
+    canvas.addEventListener("touchmove", function (event) {
+        if (isGameStarted) {
+            event.preventDefault();
+            const touch = event.touches[0];
+            const rect = canvas.getBoundingClientRect();
+            crosshair.x = touch.clientX - rect.left;
+            crosshair.y = touch.clientY - rect.top;
+        }
+    });
+    
     canvas.addEventListener("touchstart", function (event) {
-        event.preventDefault(); // Prevent scrolling on touch devices
-        const touch = event.touches[0];
-        crosshair.x = touch.clientX - canvas.getBoundingClientRect().left;
-        crosshair.y = touch.clientY - canvas.getBoundingClientRect().top;
+        if (isGameStarted && !isGameOver) {
+            event.preventDefault();
+            const touch = event.touches[0];
+            const rect = canvas.getBoundingClientRect();
+            const touchX = touch.clientX - rect.left;
+            const touchY = touch.clientY - rect.top;
     
-        if (isGameOver) return;
-
-        // Iterate through balloons and check for clicks
-        for (let i = balloons.length - 1; i >= 0; i--) {
-            const balloon = balloons[i];
-            const dx = balloon.x - crosshair.x;
-            const dy = balloon.y - crosshair.y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
+            // Iterate through balloons and check for touches
+            for (let i = balloons.length - 1; i >= 0; i--) {
+                const balloon = balloons[i];
+                const dx = balloon.x - touchX;
+                const dy = balloon.y - touchY;
+                const distance = Math.sqrt(dx * dx + dy * dy);
     
-            if (distance < balloon.radius * 1.8) {
-                balloons.splice(i, 1);
-                score++;
+                if (distance < balloon.radius * 1.5) {
+                    balloons.splice(i, 1);
+                    score++;
+                }
             }
         }
     });
+
+    const redBalloonImage = new Image();
+    const greenBalloonImage = new Image();
+    const blueBalloonImage = new Image();
+    
+    redBalloonImage.src = "Images/red-balloon.png";
+    greenBalloonImage.src = "Images/green-balloon.png";
+    blueBalloonImage.src = "Images/blue-balloon.png";
+    
 
 // Game loop
 function gameLoop() {
