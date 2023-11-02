@@ -111,7 +111,7 @@ body {
     background-color: rgb(211, 0, 0); 
     padding: 10px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 20px;
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s ease;
@@ -237,22 +237,68 @@ button {
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
-    .container {
-        padding: 3vh;
+    body {
+        align-items: center;
+    }
+    .header {
+        text-align: center;
     }
 
-    .contact-form {
-        max-width: 100%; 
-        margin-left: 0; 
+    .nav-list {
+        justify-content: center;
+        margin-top: 3vh;
     }
 
-    .contact-form input,
-    .contact-form textarea,
-    .contact-form button {
-        width: 100%; 
+    .landing {
+        text-align: center;
+        padding: 20px;
+        margin-top: 3vh;
+    }
+
+    .profile-image {
+        max-width: 50%;
+    }
+
+    .name {
+        font-size: 1.5rem;
+        margin-bottom: 3vh;
+    }
+
+    .title {
+        font-size: 1rem;
+        margin-bottom: 3vh;
+    }
+
+    .btn {
+        width: 70%;
+    }
+
+    footer {
+        position: relative;
     }
 
     .social-icons {
-        margin-left: 25%;
+        margin: 3vh auto;
+        text-align: center;
+    }
+
+    form {
+        max-width: 90%; 
+        margin-top: 5vh;
+        margin-left: 5%;
+    }
+
+    .project {
+        padding: 2vh;
+        width: 75%;
+    }
+
+    .project h2 {
+        margin-left: 0;
+        margin-bottom: 3vh;
+    }
+
+    .section-title {
+        margin-top: 3vh;
     }
 }
