@@ -275,10 +275,11 @@ button {
 
     footer {
         position: relative;
+        margin-top: 3vh;
     }
 
     .social-icons {
-        margin: 3vh auto;
+        margin: 2vh 2vh;
         text-align: center;
     }
 
