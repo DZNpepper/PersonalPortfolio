@@ -241,4 +241,19 @@ button {
     .container {
         padding: 3vh;
     }
+
+    .contact-form {
+        max-width: 100%; 
+        margin-left: 0; 
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        width: 100%; 
+    }
+
+    .social-icons {
+        margin-left: 0;
+    }
 }
