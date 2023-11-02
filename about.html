@@ -1,198 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About</title>
-<style>
-
-/* Styling for the entire page */
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: black;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    overflow-x: hidden;
-}
-
-/* Header section */
-
-.header {
-    background-color: #000000;
-    text-align: center;
-    padding: 10px;
-    width: 100%;
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    color: rgb(211, 0, 0); 
-}
-.header .white-text {
-    color: #fff;
-}
-
-/* Navigation bar styling */
-
-.nav-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-.nav-list li {
-    margin: 0;
-}
-.nav-link {
-    color: white;
-    text-decoration: none;
-    position: relative;
-    padding: 13px 12px;
-    transition: background-color 0.3s ease;
-}
-
-/* Pseudo-element for the underline effect */
-
-.nav-link::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 0;
-    height: 2px;
-    background-color: rgb(211, 0, 0);
-    transition: width 0.3s ease;
-}
-
-/* Hover effect */
-
-.nav-link:hover::before {
-    width: 100%;
-}
-
-/* Add styling for the current-page class */
-
-.nav-link.current-page::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 100%;
-    height: 2px;
-    background-color: rgb(211, 0, 0);
-    transition: width 0.3s ease;
-}
-
-/* Styling for paragraphs */
-
-p {
-    margin-bottom: 7vh;
-}
-
-/* Header styling */
-
-.header {
-    text-align: center;
-    padding: 10px;
-}
-h6 {
-    font-size: 0.9rem;
-    margin-top: 0vh;
-}
-
-
-/* Styling for the content section */
-
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    margin-top: 9vh;
-    flex: 1; 
-  }
-
-.content p {
-    color: #ccc;
-    line-height: 1.6;
-}
-
-/* Footer styling */
-
-footer {
-    text-align: center;
-    padding: 10px;
-    margin-top: 4vh;
-    width: 100%;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-footer p {
-    color: white;
-    margin: 0;
-}
-
-/* Media query for smaller screens */
-
-@media (max-width: 768px) {
-    .container {
-      padding: 3vh;
-    }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<!-- Header section -->
-
-<div class="header">
-  <h1>Tobias <span class="white-text">Deane</span></h1>
-  <h6>Web Designer & Developer</h6>
-</div>
-
-<!-- Navigation bar -->
-
-<ul class="nav-list">
-  <li><a class="nav-link"  href="index.html">Home</a></li>
-  <li><a class="nav-link current-page" href="about.html">About</a></li>
-  <li><a class="nav-link" href="projects.html">Projects</a></li>
-  <li><a class="nav-link" href="contact.html">Contact</a></li>
-</ul>
-
-<!-- Main content container -->
-
-<div class="container">
-  <div class="content">
-    <h1>About Me</h1>
-    <p>Passionate about crafting engaging and user-centric web experiences, I am a skilled web designer and developer. With a strong foundation in both design principles and programming languages, I seamlessly blend aesthetics and functionality. My journey began with a love for creative expression and evolved into a deep understanding of the digital landscape.</p>
-    <h2>Key Skills</h2>
-    <ul>
-      <li>Responsive web design</li>
-      <li>Front-end development (HTML, CSS, JavaScript)</li>
-      <li>UI/UX design</li>
-      <li>Visual communication</li>
-      <li>Problem-solving</li>
-      <li>Creative thinking</li>
-    </ul>
-  </div>
-</div>
-
-<!-- Footer section -->
-
-<footer>
-  <p>&copy; 2023 Tobias Deane. All rights reserved.</p>
-</footer>
+    <header class="header" role="banner">
+        <h1>Tobias <span class="white-text">Deane</span></h1>
+        <h6>Web Designer & Developer</h6>
+    </header>
+    <nav role="navigation" aria-label="Main Navigation">
+        <ul class="nav-list">
+            <li><a class="nav-link" href="index.html">Home</a></li>
+            <li><a class="nav-link current-page" href="about.html" aria-current="page">About</a></li>
+            <li><a class="nav-link" href="projects.html">Projects</a></li>
+            <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main class="container" role="main">
+        <section class="content">
+            <h2>About Me</h2>
+            <p>Passionate about crafting engaging and user-centric web experiences, I am a skilled web designer and developer. With a strong foundation in both design principles and programming languages, I seamlessly blend aesthetics and functionality. My journey began with a love for creative expression and evolved into a deep understanding of the digital landscape.</p>
+            <h2>Key Skills</h2>
+            <ul aria-label="List of Key Skills">
+                <li>Responsive web design</li>
+                <li>Front-end development (HTML, CSS, JavaScript)</li>
+                <li>UI/UX design</li>
+                <li>Visual communication</li>
+                <li>Problem-solving</li>
+                <li>Creative thinking</li>
+            </ul>
+        </section>
+    </main>
+    <footer role="contentinfo">
+        <p>&copy; 2023 Tobias Deane. All rights reserved.</p>
+    </footer>
 </body>
 </html>

@@ -1,38 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Balloon Shooter Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <!-- Header section -->
-    <div class="header">
+    <header class="header">
         <h1>Tobias <span class="white-text">Deane</span></h1>
         <h6>Web Designer & Developer</h6>
-    </div>
+    </header>
+    <nav role="navigation" aria-label="Main Navigation">
+        <ul class="nav-list">
+            <li><a class="nav-link" href="projects.html">Back to Projects</a></li>
 
-    <!-- Back button -->
-    <div class="container">
-        <a class="back-button" href="projects.html">&#8592; Back to Projects</a>
-    </div>
-
- <!-- Main content -->
-<div class="container">
-    <h1 class="game">Shoot the Balloons </h1>
-    <div class="canvas-container">
-        <canvas id="game-canvas"></canvas>
-    </div>
-    <script src="BalloonShooter.js"></script>
-</div>
-
-    <!-- Footer section -->
-    <footer>
+        </ul>
+    </nav>
+    <main class="container">
+        <h1 class="game">Shoot the Balloons </h1>
+        <div class="canvas-container">
+            <canvas id="game-canvas"></canvas>
+        </div>
+        <script src="BalloonShooter.js"></script>
+    </main>
+    <footer role="contentinfo">
         <p>&copy; 2023 Tobias Deane. All rights reserved.</p>
-      </footer>
+    </footer>
 </body>
-
 </html>

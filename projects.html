@@ -1,282 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Projects</title>
-<style>
-
-/* Styling for the entire page */
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: black;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    overflow-x: hidden;
-}
-
-/* Header section */
-
-.header {
-    padding: 10px;
-    width: 100%;
-    display: flex; 
-    align-items: center;
-    flex-direction: column;
-}
-.header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    color: rgb(211, 0, 0); 
-}
-.header .white-text {
-    color: #fff;
-}
-
-/* Navigation bar styling */
-
-.nav-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-.nav-list li {
-    margin: 0;
-}
-.nav-link {
-    color: white;
-    text-decoration: none;
-    position: relative;
-    padding: 13px 12px;
-    transition: background-color 0.3s ease;
-}
-
-/* Pseudo-element for the underline effect */
-
-.nav-link::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 0;
-    height: 2px;
-    background-color: rgb(211, 0, 0);
-    transition: width 0.3s ease;
-}
-
-/* Hover effect */
-
-.nav-link:hover::before {
-    width: 75%;
-}
-
-/* Add styling for the current-page class */
-
-.nav-link.current-page::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 100%;
-    height: 2px;
-    background-color: rgb(211, 0, 0);
-    transition: width 0.3s ease;
-}
- /* Styling for paragraphs */
-
- p {
-    margin-bottom: 4vh;
-  }
-  h1 {
-    margin-top: -3vh;
-  }
-
-  /* Styling for headings */
-
-  h2 {
-    margin-top: 0;
-    color: white;
-  }
-
-  h6 {
-    font-size: 0.9rem;
-    margin-top: 0vh;
-}
-
-  /* Container styling */
-
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    margin-top: 9vh;
-    flex: 1; 
-  }
-
-  /* Styling for individual projects */
-
-  .project {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 20px;
-    margin-bottom: 5vh;
-    margin-top: 7vh;
-    background-color: #000000;
-  }
-
-  /* Styling for project titles */
-
-  .project h2 {
-    color: red;
-  }
-
-.project-content {
-  text-align: center;
-}
-.project-content a {
-    text-decoration: none;
-    color: white; /* Set initial text color to white */
-    transition: color 0.3s ease; /* Add transition effect for text color change */
-}
-.project-content a:hover,
-.project-content a:active {
-    text-decoration: underline;
-    color: red; /* Change text color to red on hover or click */
-}
-.section-title {
-    font-size: 2rem;
-    color: rgb(243, 243, 243);
-    margin-top: 3vh;
-}
-
-.game-description {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 2vh;
-}
-
-.feature-list {
-    margin-top: 1.5rem;
-}
-
-.feature-list h3 {
-    color: red;
-}
-
-.feature-list ul {
-    list-style: none;
-    padding: 25px;
-}
-
-.feature-list li {
-    margin-bottom: 0.5rem;
-}
-
-.feature-list li strong {
-    color: red;
-}
-
-/* Footer styling */
-
-footer {
-    text-align: center;
-    padding: 10px;
-    margin-top: 4vh;
-    width: 100%;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-footer p {
-    color: white;
-    margin: 0;
-}
-
-/* Media query for smaller screens */
-
-@media (max-width: 768px) {
-    .container {
-      padding: 3vh;
-    }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<!-- Header section -->
-
-<div class="header">
-  <h1>Tobias <span class="white-text">Deane</span></h1>
-  <h6>Web Designer & Developer</h6>
-</div>
-
-<!-- Navigation bar -->
-
-<ul class="nav-list">
-  <li><a class="nav-link"  href="index.html">Home</a></li>
-  <li><a class="nav-link" href="about.html">About</a></li>
-  <li><a class="nav-link current-page" href="projects.html">Projects</a></li>
-  <li><a class="nav-link" href="contact.html">Contact</a></li>
-</ul>
-
-
-<!-- Main content container -->
-
-<div class="container">
-  <h1>My Projects</h1>
-
-  <!-- Project 1 -->
-
-  <div class="project project-content">
-    <h2>Project 1: Balloon Shooter Game</h2>
-    <img class="project-image" src="Images/red-balloon.png" alt="Project 1 (Balloon Shooter Game)">
-    <p><a href="BalloonShooter.html">Play Game</a></p>
-</div>
-  <h2 class="section-title">Game Description</h2>
-  <div class="game-description">
-      <div class="feature-list">
-          <ul>
-              <li><strong>Interactive Balloons:</strong> Players can interact with the balloons, aiming to pop them by clicking on the screen.</li>
-              <li><strong>Dynamic Crosshair:</strong> Stay on target with the dynamic crosshair located at the center of the screen. </li>
-              <li><strong>Score Tracking:</strong> Keep track of your progress through a dedicated score meter displayed on the screen. 
-                Successfully popping balloons adds points to your score, while missing balloons results in score deductions.</li>
-              <li><strong>Gameplay Challenges:</strong> To elevate the gaming experience, the balloons move in a wobbly pattern, creating an extra layer of challenge.
-                 Players must time their shots accurately to pop the balloons amidst their unpredictable movement.</li>
-          </ul>
-      </div>
-      <h3>How to Play:</h3>
-      <p><strong>Popping Balloons:</strong> Use your skills to pop balloons by clicking the left mouse button.</p>
-      <p>Only Works for Desktop</p>
-    </div>
-  
-
-  <!-- Project 2 -->
-
-  <div class="project project-content">
-    <h2>Project 2: Coming Soon</h2>
-    <img class="project-image" src="project2.jpg" alt="Project 2">
-    <p><a href="#">View Project</a></p>
-</div>
-
-  <h2>Description:</h2>
-  <p>Coming soon</p>
-</div>
-
-<!-- Footer section -->
-
-<footer>
-  <p>&copy; 2023 Tobias Deane. All rights reserved.</p>
-</footer>
+    <header class="header">
+        <h1>Tobias <span class="white-text">Deane</span></h1>
+        <h6>Web Designer & Developer</h6>
+    </header>
+    <nav role="navigation" aria-label="Main Navigation">
+      <ul class="nav-list">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+          <li><a class="nav-link current-page" href="projects.html">Projects</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+  </nav>
+    <main class="container">
+        <h2>My Projects</h2>
+        <section class="project project-content">
+            <h3>Project 1: Balloon Shooter Game</h3>
+            <img class="project-image" src="Images/red-balloon.png" alt="Project 1 (Balloon Shooter Game)">
+            <p><a href="BalloonShooter.html">Play Game</a></p>
+            <div class="game-description">
+                <div class="feature-list">
+                    <p> Only for Desktop </p>
+                    <h3>Features:</h3>
+                    <ul>
+                        <li><strong>Interactive Balloons:</strong> Players can interact with the balloons, aiming to pop them by clicking on the screen.</li>
+                        <li><strong>Dynamic Crosshair:</strong> Stay on target with the dynamic crosshair located at the center of the screen.</li>
+                        <li><strong>Score Tracking:</strong> Keep track of your progress through a dedicated score meter displayed on the screen. Successfully popping balloons adds points to your score, while missing balloons results in score deductions.</li>
+                        <li><strong>Gameplay Challenges:</strong> To elevate the gaming experience, the balloons move in a wobbly pattern, creating an extra layer of challenge. Players must time their shots accurately to pop the balloons amidst their unpredictable movement.</li>
+                    </ul>
+                </div>
+                <h3>How to Play:</h3>
+                <p><strong>Popping Balloons:</strong> Use your skills to pop balloons by clicking the left mouse button.</p>
+            </div>
+        </section>
+        <section class="project project-content">
+            <h3>Project 2: Coming Soon</h3>
+            <img class="project-image" src="project2.jpg" alt="Project 2">
+            <p><a href="#">View Project</a></p>
+            <p>Description: Coming soon</p>
+        </section>
+    </main>
+    <footer role="contentinfo">
+      <p>&copy; 2023 Tobias Deane. All rights reserved.</p>
+  </footer>
 </body>
 </html>

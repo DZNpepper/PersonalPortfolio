@@ -1,21 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
-
     // Constants
     const canvas = document.getElementById("game-canvas");
     const ctx = canvas.getContext("2d");
     const balloonImage = new Image();
     const balloons = [];
-    balloonImage.src = "red-balloon.png";
-
+    
     // Variables
     let score = 0;
     let isGameOver = false;
     let isGameStarted = false;
-
     // Set canvas dimensions
     canvas.width = 800;
     canvas.height = 600;
-
     // Draw Crosshair
     const crosshair = {
         x: canvas.width / 2,
@@ -26,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
             ctx.strokeStyle = "white";
             ctx.lineWidth = 2;
             ctx.beginPath();
-            // Draw X shape
             ctx.moveTo(this.x - this.width / 2, this.y - this.height / 2);
             ctx.lineTo(this.x + this.width / 2, this.y + this.height / 2);
             ctx.moveTo(this.x + this.width / 2, this.y - this.height / 2);
@@ -41,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
             this.x = Math.random() * canvas.width;
             this.y = canvas.height;
             this.radius = 20;
-            this.speed = Math.random() * 2 + 1;
+            this.speed = Math.random() * 1 + 0.5;
             const colors = ['red', 'green', 'blue'];
             this.color = colors[Math.floor(Math.random() * colors.length)];
             this.wobble = Math.random() * Math.PI * 2;
