@@ -244,7 +244,9 @@ button {
     .header {
         text-align: center;
     }
-
+    nav {
+        margin-left: -4vh;
+    }
     .nav-list {
         justify-content: center;
         margin-top: 3vh;
