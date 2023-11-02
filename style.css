@@ -8,7 +8,6 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    overflow-x: hidden;
 }
 
 /* Header styles */
@@ -254,6 +253,6 @@ button {
     }
 
     .social-icons {
-        margin-left: 0;
+        margin-left: 25%;
     }
 }
