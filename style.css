@@ -239,6 +239,7 @@ button {
 @media (max-width: 768px) {
     body {
         align-items: center;
+        overflow-x: hidden;
     }
     .header {
         text-align: center;
@@ -257,6 +258,7 @@ button {
 
     .profile-image {
         max-width: 40%;
+        height: 50%;
         margin-top: 0;
     }
 
@@ -295,7 +297,7 @@ button {
 
     .project {
         padding: 2vh;
-        width: 75%;
+        width: 95%;
     }
 
     .project h2 {
