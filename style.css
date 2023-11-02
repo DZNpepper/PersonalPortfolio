@@ -220,7 +220,7 @@ button {
     text-decoration: underline;
     color: red;
 }
-/* Additional styles for the project description */
+
 .game-description ul {
     list-style: none; 
     padding: 0;
@@ -262,6 +262,7 @@ button {
     .container {
     width: 80%;
     }
+    
     .name {
         font-size: 1.5rem;
         margin-bottom: 3vh;

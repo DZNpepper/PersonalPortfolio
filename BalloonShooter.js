@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
     let score = 0;
     let isGameOver = false;
     let isGameStarted = false;
-    // Set canvas dimensions
-    canvas.width = 800;
-    canvas.height = 600;
+    // Set canvas dimensions based on window size
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
     // Draw Crosshair
     const crosshair = {
         x: canvas.width / 2,
@@ -46,8 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
             this.y -= this.speed;
             this.x += Math.sin(this.wobble) * 2;
             this.y -= this.speed;
-            this.wobble += 0.1;
-
+            this.wobble += 0.01; 
             if (this.wobble > Math.PI * 2) {
                 this.wobble -= Math.PI * 2;
             }
