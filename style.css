@@ -134,6 +134,7 @@ footer {
     align-items: center;
 }
 footer p {
+    margin-left: 2vh;
     color: white;
     margin: 0;
 }
